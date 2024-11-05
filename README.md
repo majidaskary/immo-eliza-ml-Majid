@@ -24,35 +24,26 @@ Find me on [LinkedIn](https://www.linkedin.com/in/majidaskary) for collaboration
 
 ## 📦 Repo structure
 ```.
-│   advance_preprocessed_dataset.csv
-│   apartment_model_performance_summary.csv
 │   Artificial_Neural_Network_model.py
-│   basic_preprocessed_dataset.csv
-│   becode_properties.csv
-│   mlenv virtual environment libruaries.txt
 │   predict.py
-│   preprocessing.ipynb
 │   README.md
 │   train.py
 │   tree_output.txt
 │   
-├───catboost_info
-│   │   catboost_training.json
-│   │   learn_error.tsv
-│   │   time_left.tsv
-│   │   
-│   ├───learn
-│   │       events.out.tfevents
-│   │       
-│   └───tmp
-├───mlenv
-│   │   pyvenv.cfg
-│   │   
-│   ├───etc
-│   ├───Include
-│   ├───Lib
-│   ├───Scripts
-│   └───share
+├───dataset
+│       advance_preprocessed_dataset.csv
+│       apartment_model_performance_summary.csv
+│       basic_preprocessed_dataset.csv
+│       becode_properties.csv
+│       
+├───info
+│       mlenv_virtual_environment_libruaries.txt
+│       output.png
+│       tree_output.txt
+│       
+├───Notebook
+│       preprocessing.ipynb
+│       
 └───trained_models
         CatBoost_Regresso_Apartment.pkl
         CatBoost_Regresso_House.pkl
@@ -104,6 +95,9 @@ run_mlr_model(df)
 # run_rf_model(df)
 ```
 
+Results:
+The results of the implementation of 7 machine learning models with regression types show that the best result is obtained by the gb.LGBM Regressor algorithm with a score of 0.831801 in the training samples and 0.752509 in the test samples. 
+
 ```python
 # Output example:
 Summary of Model Performances:
@@ -144,8 +138,8 @@ Summary of Model Performances for Houses (sorted by Testing score):
 0            Linear Regression         House        0.342013       0.332200  109571.850747  3.239271e+10
 ```
 
-
-![Output chart](output.png)
+Comparison of two models of Linear Regression and gb.LGBM Regressor ventilation with the worst and best scores obtained
+![Output chart](info/output.png)
 
 
 ## ⏱️ Project Timeline
@@ -153,6 +147,7 @@ The initial setup of this project was completed in 5 days.
 
 ## 🔧 Updates & Upgrades
 ### Recent Updates
+By implementing more optimal methods for sample data preprocessing and also by having a larger volume of sample data, better results can be achieved in learning models.
 
 ### Planned Upgrades
 - **Data Pipeline Enhancement**: Improve the automation of data preprocessing and feature selection.
