@@ -24,22 +24,19 @@ Find me on [LinkedIn](https://www.linkedin.com/in/majidaskary) for collaboration
 
 ## 📦 Repo structure
 ```.
-│   Artificial_Neural_Network_model.py
+│   ANN.py
 │   predict.py
 │   README.md
 │   train.py
-│   tree_output.txt
-│   
+│ 
 ├───dataset
 │       advance_preprocessed_dataset.csv
-│       apartment_model_performance_summary.csv
 │       basic_preprocessed_dataset.csv
 │       becode_properties.csv
 │       
 ├───info
 │       mlenv_virtual_environment_libruaries.txt
 │       output.png
-│       tree_output.txt
 │       
 ├───Notebook
 │       preprocessing.ipynb
@@ -117,6 +114,7 @@ Summary of Model Performances:
 12            CatBoost Regresso     Apartment        0.749336       0.718696   80765.796348  2.101844e+10
 13            CatBoost Regresso         House        0.682983       0.634674   83316.092535  1.772074e+10
 
+
 Summary of Model Performances for Apartments (sorted by Testing score):
                          Model Property Type  Training score  Testing score            MAE           MSE
 5            gb.LGBM Regressor     Apartment        0.831801       0.752509   73909.409118  1.849203e+10
@@ -126,6 +124,7 @@ Summary of Model Performances for Apartments (sorted by Testing score):
 2      Random Forest Regressor     Apartment        0.781933       0.703268   81684.373631  2.217116e+10
 1                Decision Tree     Apartment        0.750463       0.645647   86943.555409  2.647649e+10
 0            Linear Regression     Apartment        0.331460       0.331875  119534.445774  4.992089e+10
+
 
 Summary of Model Performances for Houses (sorted by Testing score):
                          Model Property Type  Training score  Testing score            MAE           MSE
@@ -138,7 +137,10 @@ Summary of Model Performances for Houses (sorted by Testing score):
 0            Linear Regression         House        0.342013       0.332200  109571.850747  3.239271e+10
 ```
 
+
 Comparison of two models of Linear Regression and gb.LGBM Regressor ventilation with the worst and best scores obtained
+
+
 ![Output chart](info/output.png)
 
 
