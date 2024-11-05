@@ -147,12 +147,12 @@ trainer = ModelTrainer(advance_preprocessed_dataset, apartment_features, house_f
 
 #Add models to the trainer
 trainer.add_model('Linear Regression', LinearRegression(fit_intercept=True, n_jobs=-1))
-# trainer.add_model('Decision Tree', DecisionTreeRegressor(max_depth=8, min_samples_split=4, random_state=42))
-# trainer.add_model('Random Forest Regressor', RandomForestRegressor(n_estimators=100, max_depth=8, min_samples_split=4, random_state=42, n_jobs=-1))
-# trainer.add_model('Gradient Boosting Regressor', GradientBoostingRegressor(n_estimators=150, learning_rate=0.07, max_depth=4, min_samples_split=4, random_state=42))
-# trainer.add_model('XGB Regressor',XGBRegressor(n_estimators=200,learning_rate=0.05, max_depth=4, min_child_weight=6,subsample=0.8, colsample_bytree=0.8, random_state=42))
+trainer.add_model('Decision Tree', DecisionTreeRegressor(max_depth=8, min_samples_split=4, random_state=42))
+trainer.add_model('Random Forest Regressor', RandomForestRegressor(n_estimators=100, max_depth=8, min_samples_split=4, random_state=42, n_jobs=-1))
+trainer.add_model('Gradient Boosting Regressor', GradientBoostingRegressor(n_estimators=150, learning_rate=0.07, max_depth=4, min_samples_split=4, random_state=42))
+trainer.add_model('XGB Regressor',XGBRegressor(n_estimators=200,learning_rate=0.05, max_depth=4, min_child_weight=6,subsample=0.8, colsample_bytree=0.8, random_state=42))
 trainer.add_model('gb.LGBM Regressor', lgb.LGBMRegressor(num_leaves=31, learning_rate=0.03, n_estimators=200, max_depth=7, min_child_samples=5, subsample=0.8, colsample_bytree=0.8, random_state=42))
-# trainer.add_model('CatBoost Regresso', CatBoostRegressor(iterations=200, learning_rate=0.03, depth=7, l2_leaf_reg=3, random_seed=42,verbose=0))
+trainer.add_model('CatBoost Regresso', CatBoostRegressor(iterations=200, learning_rate=0.03, depth=7, l2_leaf_reg=3, random_seed=42,verbose=0))
 
 # Run training and evaluation for all models added to the trainer
 results, apartment_results, house_results = trainer.run_all_models()
