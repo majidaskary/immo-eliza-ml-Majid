@@ -81,15 +81,13 @@ Then, run train.py to execute the modeling pipeline. You can comment out any mod
 Example snippet from `train.py`:
 
 ```python
-
 class ModelTrainer:
     def __init__(self, dataset_path, apartment_features, house_features,max_price):
         self.dataset_path = dataset_path
         self.dataset = pd.read_csv(dataset_path)
-
-# Uncomment the model you wish to run
-run_mlr_model(df)
-# run_rf_model(df)
+.  
+.  
+.
 ```
 
 Results:
